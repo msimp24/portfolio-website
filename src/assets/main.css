@@ -1,35 +1,80 @@
-@import './base.css';
+:root {
+  --primary-white: #eeeeee;
+  --light-gray: #686d76;
+  --primary-dark: #373a40;
+  --primary-orange: #dc5f00;
+}
 
-#app {
-  max-width: 1280px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+}
+body {
+  background-color: var(--primary-dark);
+}
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  padding: 2rem 0;
+  width: 60%;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.row {
+  display: flex;
+}
+.col {
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+h3 {
+  color: var(--primary-white);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  align-self: flex-start;
+}
+h2 {
+  color: var(--primary-white);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-size: 38px;
+  align-self: flex-start;
+}
+p {
+  color: var(--primary-white);
+  line-height: 30px;
+  font-size: 20px;
+  align-self: flex-start;
+}
+button {
+  padding: 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  background-color: var(--primary-dark);
+  border: 2px solid var(--primary-white);
+  font-size: 20px;
+  border-radius: 26px;
+  font-weight: 500;
+  align-self: flex-start;
+  color: var(--primary-white);
+}
+button:hover {
+  outline: 2px solid var(--primary-dark);
+  background-color: var(--primary-white);
+  color: var(--primary-dark);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@media (width < 1000px) {
+  .container {
+    max-width: auto;
+    width: 90%;
   }
 }

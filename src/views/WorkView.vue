@@ -13,18 +13,18 @@ const workCards = ref([
     link: 'https://bookmark-landing-page-7mh5.onrender.com/'
   },
   {
-    title: 'Job Board Template',
-    desc: 'Basic job board website template built with Vue for front-end and Node JS for backend.',
-    img: '/images/card-images/job-board.png',
-    slug: 'job-board',
-    link: 'https://job-board-1-xh9d.onrender.com'
-  },
-  {
     title: 'Countries Info App',
     desc: 'Practice project showing front-end skillset dealing with large dataset API',
     img: '/images/card-images/countries-dark-mode.png',
     slug: 'countries',
     link: 'https://rest-api-countries-33wc.onrender.com'
+  },
+  {
+    title: 'Job Board Template',
+    desc: 'Basic job board website template built with Vue for front-end and Node JS for backend.',
+    img: '/images/card-images/job-board.png',
+    slug: 'job-board',
+    link: 'https://job-board-1-xh9d.onrender.com'
   }
 ])
 </script>

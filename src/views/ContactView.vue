@@ -140,7 +140,7 @@ form {
 
 .row {
   gap: 20px;
-  margin: 50px 0;
+  margin: 50px;
 }
 
 @media (width<700px) {

@@ -17,7 +17,9 @@ watch(() => {
 })
 const routes = [
   { path: '/', name: 'Home' },
+
   { path: '/projects', name: 'Projects' },
+
   { path: '/contact', name: 'Contact' }
 ]
 </script>
@@ -133,7 +135,7 @@ nav ul {
   gap: 30px;
 }
 
-@media (width < 750px) {
+@media (width < 800px) {
   nav {
   }
   .clicked {

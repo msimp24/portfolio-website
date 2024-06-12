@@ -45,7 +45,7 @@ const technologies = ref([
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="typewriter">Building Websites That Empower Local Businesses</h2>
+            <h2 class="typewriter">Building Websites That Empower Small Businesses</h2>
           </div>
 
           <div class="col">
@@ -58,19 +58,26 @@ const technologies = ref([
       <div class="row">
         <div class="col">
           <h3>Freelance Full Stack Web Developer | Professional Hockey Player</h3>
-          <p>
-            My name is <span class="color">Mark Simpson</span>, a full-stack developer passionate
-            about empowering local businesses with a strong online presence. I create budget and
-            user-friendly, responsive websites that help local businesses thrive. I have a Bachelors
-            of Computer Science degree from the University of New Brunswick.<br />
-            <br />
-            When I'm not coding, I hit the ice as a professional hockey player. This balance between
-            the technical and physical worlds fuels my creativity and drive to deliver exceptional
-            results.
-          </p>
-          <RouterLink class="work-btn"
-            ><button @click="$router.push('/projects')">View Work</button></RouterLink
-          >
+          <div class="row">
+            <div class="col">
+              <img class="hockey-img" src="/images/action-shot.jpeg" alt="" />
+            </div>
+            <div class="col">
+              <p>
+                My name is <span class="color">Mark Simpson</span>, a full-stack developer
+                passionate about empowering local businesses with a strong online presence. I create
+                budget and user-friendly, responsive websites that help local businesses thrive. I
+                have a Bachelors of Computer Science degree from the University of New Brunswick.<br />
+                <br />
+                When I'm not coding, I hit the ice as a professional hockey player. This balance
+                between the technical and physical worlds fuels my creativity and drive to deliver
+                exceptional results.
+              </p>
+              <RouterLink class="work-btn"
+                ><button @click="$router.push('/projects')">View Work</button></RouterLink
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -111,6 +118,7 @@ const technologies = ref([
 <style scoped>
 .hero {
   background-color: var(--primary-white);
+  padding: 50px 0;
 }
 .typewriter {
   color: var(--primary-dark);
@@ -141,7 +149,7 @@ const technologies = ref([
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .row {
-  gap: 25px;
+  gap: 40px;
 }
 h4 {
   font-size: 24px;
@@ -176,6 +184,10 @@ h4 {
 
 .color {
   font-weight: 700;
+}
+.hockey-img {
+  margin: 20px 0;
+  border-radius: 20px;
 }
 
 @media (width<750px) {

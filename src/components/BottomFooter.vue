@@ -28,8 +28,10 @@
 }
 p {
   align-self: flex-end;
+  color: var(--primary-white);
 }
 .hero {
+  background-color: var(--light-gray);
 }
 
 .icons-container {

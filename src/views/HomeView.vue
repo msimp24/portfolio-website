@@ -1,20 +1,27 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+
+onMounted(() => {
+  window.scrollTo(0, 0)
+})
 const capabilites = ref([
   {
     title: 'Full Stack Web Development',
     description:
-      'Ability to handle both front-end (user interface) and back-end (server-side) development.'
+      'Ability to handle both front-end (user interface) and back-end (server-side) development.',
+    img: '/laptop.svg'
   },
   {
     title: 'Responsive Website Design',
     description:
-      'Capability to build websites that adapt to different screen sizes (mobile, tablet, desktop).'
+      'Capability to build websites that adapt to different screen sizes (mobile, tablet, desktop).',
+    img: '/mobile-phone.svg'
   },
   {
     title: 'Visually Appealing Landing Page',
     description:
-      'Let me help drive traffic for your business by creating a user friendly landing page website.'
+      'Let me help drive traffic for your business by creating a user friendly landing page website.',
+    img: '/globe-dark.svg'
   }
 ])
 
@@ -34,17 +41,18 @@ const technologies = ref([
 
 <template>
   <main>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2 class="typewriter">Building Websites That Empower Local Businesses</h2>
-        </div>
+    <div class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="typewriter">Building Websites That Empower Local Businesses</h2>
+          </div>
 
-        <div class="col">
-          <img src="./../assets/images/linked-in-profile.jpg" alt="" />
+          <div class="col">
+            <img class="prof-img" src="/images/linked-in-profile.jpg" alt="" />
+          </div>
         </div>
       </div>
-      <div class="row"></div>
     </div>
     <div class="container">
       <div class="row">
@@ -52,15 +60,17 @@ const technologies = ref([
           <h3>Freelance Full Stack Web Developer | Professional Hockey Player</h3>
           <p>
             My name is <span class="color">Mark Simpson</span>, a full-stack developer passionate
-            about empowering local businesses with a strong online presence. I create user-friendly,
-            responsive websites that help local businesses thrive. I have a Bachelors of Computer
-            Science degree from the University of New Brunswick.<br />
+            about empowering local businesses with a strong online presence. I create budget and
+            user-friendly, responsive websites that help local businesses thrive. I have a Bachelors
+            of Computer Science degree from the University of New Brunswick.<br />
             <br />
             When I'm not coding, I hit the ice as a professional hockey player. This balance between
             the technical and physical worlds fuels my creativity and drive to deliver exceptional
             results.
           </p>
-          <button @click="$router.push('/home')">View Work</button>
+          <RouterLink class="work-btn"
+            ><button @click="$router.push('/projects')">View Work</button></RouterLink
+          >
         </div>
       </div>
     </div>
@@ -70,10 +80,13 @@ const technologies = ref([
           <h2>Services</h2>
         </div>
       </div>
-      <div v-for="item in capabilites" :key="item" class="row">
-        <div class="col services">
-          <h3>{{ item.title }}</h3>
-          <p class="p-desc">{{ item.description }}</p>
+      <div class="row">
+        <div class="col services-card" v-for="item in capabilites" :key="item">
+          <div class="services-col"></div>
+          <img class="card-img" :src="item.img" alt="" />
+
+          <h4>{{ item.title }}</h4>
+          <p class="card-p">{{ item.description }}</p>
         </div>
       </div>
     </div>
@@ -96,11 +109,43 @@ const technologies = ref([
 </template>
 
 <style scoped>
-.services {
-  width: 100%;
+.hero {
+  background-color: var(--primary-white);
+}
+.typewriter {
+  color: var(--primary-dark);
+}
+.card-img {
+  width: 25%;
+}
+.card-p {
+  color: var(--primary-dark);
+  font-size: 16px;
+}
+.services-card {
   display: flex;
-  border-bottom: 4px solid var(--primary-white);
-  margin-bottom: 30px;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  border: solid 2px var(--primary-dark);
+  background-color: var(--primary-white);
+  border-radius: 20px;
+  max-width: 380px;
+  color: var(--primary-dark);
+  text-align: center;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.row {
+  gap: 25px;
+}
+h4 {
+  font-size: 24px;
+  text-align: center;
 }
 .col {
   display: flex;
@@ -109,34 +154,34 @@ const technologies = ref([
   align-items: center;
 }
 
-img {
-  width: 40%;
+.prof-img {
+  width: 70%;
   border-radius: 25%;
   border: solid var(--light-gray) 8px;
   min-width: 250px;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.work-btn {
+  align-self: flex-start;
 }
 
 .p-desc {
   margin-bottom: 10px;
 }
-.tech-btns-container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.tech-btns {
-  background-color: var(--primary-white);
-  padding: 16px;
-  margin: 8px 10px;
-  border-radius: 20px;
-}
+
 .color {
-  color: var(--primary-orange);
+  font-weight: 700;
 }
 
-@media (width<600px) {
+@media (width<750px) {
   .row {
     flex-direction: column;
+    align-items: center;
   }
   .h2 {
     text-align: center;

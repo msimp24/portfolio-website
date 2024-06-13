@@ -20,7 +20,7 @@ onMounted(() => {
         <div class="wrapper">
           <img class="icons" src="/location.svg" alt="" />
           <h3>Location</h3>
-          <p>Saint John, NB</p>
+          <p>Saint John, NB/Sheffield, UK</p>
         </div>
       </div>
       <div class="col">

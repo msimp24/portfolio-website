@@ -58,7 +58,6 @@ p {
   color: var(--primary-white);
   line-height: 30px;
   font-size: 20px;
-  align-self: flex-start;
 }
 button {
   padding: 20px;

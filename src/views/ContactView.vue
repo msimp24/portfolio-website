@@ -31,28 +31,6 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <!--
-    <form action="">
-      <div class="row">
-        <div class="col">
-          <label for="Name">Name</label><input class="small-input" type="text" />
-        </div>
-        <div class="col">
-          <label for="Email">Email</label><input class="small-input" type="text" />
-        </div>
-      </div>
-      <div class="row"></div>
-      <div class="row">
-        <div class="col">
-          <label class="" for="message">Message</label>
-          <textarea id="message" name="message"></textarea>
-        </div>
-      </div>
-      <div class="center">
-        <button class="submit-button">Submit</button>
-      </div>
-    </form>
-    -->
   </div>
 </template>
 

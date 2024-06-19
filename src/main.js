@@ -19,7 +19,7 @@ app.use(createPinia())
 app.use(router)
 app.use(library)
 app.use(VueGtag, {
-  config: { id: '8278275127' }
+  config: { id: 'G-88BK9DMNBT' }
 })
 
 app.mount('#app')

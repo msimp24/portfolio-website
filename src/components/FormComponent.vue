@@ -128,5 +128,8 @@ form {
     flex-direction: column;
     gap: 0px;
   }
+  .submit-button {
+    width: 50%;
+  }
 }
 </style>

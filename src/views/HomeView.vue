@@ -31,11 +31,11 @@ const technologies = ref([
   'Javascript',
   'Vue',
   'Node JS',
+  'Express',
   'MongoDB',
-  'SQL',
-  'Firebase',
-  'Vite',
-  'REST'
+  'MySQL',
+  'PHP',
+  'JQuery'
 ])
 </script>
 
